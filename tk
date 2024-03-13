@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página web de transporte</title>
+  <style>
+    /* Estilos CSS */
+  </style>
+</head>
+<body>
+  <h1>Transporte</h1>
+
+  <h2>Información de Saldo</h2>
+  <label for="nit">NIT:</label>
+  <input type="text" id="nit">
+  <br>
+  <label for="saldo">Saldo:</label>
+  <input type="text" id="saldo">
+  <br>
+  <label for="dias">Días:</label>
+  <select id="dias">
+    <option value="Lunes">Lunes</option>
+    <option value="Martes">Martes</option>
+    <option value="Miércoles">Miércoles</option>
+    <option value="Jueves">Jueves</option>
+    <option value="Viernes">Viernes</option>
+  </select>
+  <br>
+  <label for="activarSaldo">Activar Saldo:</label>
+  <input type="checkbox" id="activarSaldo">
+  <br>
+  <label for="saldoEspecial">Saldo Especial de Tiketes:</label>
+  <input type="number" id="saldoEspecial">
+  <br>
+  <button id="guardar">Guardar</button>
+
+  <h2>Iniciar Sesión</h2>
+  <label for="usuario">Usuario:</label>
+  <input type="text" id="usuario">
+  <br>
+  <label for="contrasena">Contraseña:</label>
+  <input type="password" id="contrasena">
+  <br>
+  <button id="iniciarSesion">Iniciar Sesión</button>
+
+  <h2>Descuento de Viaje</h2>
+  <label for="nitDescuento">NIT:</label>
+  <input type="text" id="nitDescuento">
+  <br>
+  <label for="viajeDescuento">Viaje:</label>
+  <input type="text" id="viajeDescuento">
+  <br>
+  <button id="descuento">Aplicar Descuento</button>
+
+  <h2>Historial</h2>
+  <label for="nitHistorial">NIT:</label>
+  <input type="text" id="nitHistorial">
+  <button id="buscarHistorial">Buscar Historial</button>
+  <div id="historial"></div>
+
+  <script>
+    // Funcionalidad JavaScript
+    document.getElementById("guardar").addEventListener("click", function() {
+    // Obtener los valores de los campos de entrada
+    var nit = document.getElementById("nit").value;
+    var saldo = document.getElementById("saldo").value;
+    var dias = document.getElementById("dias").value;
+    var activarSaldo = document.getElementById("activarSaldo").checked;
+    var saldoEspecial = document.getElementById("saldoEspecial").value;
+
+    // Realizar la lógica de guardar la información de saldo aquí
+    var informacionSaldo = {
+      nit: nit,
+      saldo: saldo,
+      dias: dias,
+      activarSaldo: activarSaldo,
+      saldoEspecial: saldoEspecial
+    };
+
+    // Aquí puedes realizar las operaciones necesarias, como enviar los datos
+  });
+
+  // Otros eventos y funciones JavaScript aquí
+
+  </script>
+
+</body>
+</html>
